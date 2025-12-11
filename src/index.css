@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/lato/300.css";
+@import "@fontsource/lato/400.css";
+@import "@fontsource/lato/700.css";
+
+@layer base {
+  :root {
+    /* Warm beige palette */
+    --background: 35 25% 95%;
+    --foreground: 20 15% 15%;
+
+    --card: 35 20% 92%;
+    --card-foreground: 20 15% 15%;
+
+    --popover: 35 20% 92%;
+    --popover-foreground: 20 15% 15%;
+
+    /* Deep crimson primary #a0112f = 347 81% 35% */
+    --primary: 347 81% 35%;
+    --primary-foreground: 35 25% 95%;
+
+    /* Warm beige secondary */
+    --secondary: 32 20% 88%;
+    --secondary-foreground: 20 15% 20%;
+
+    /* Muted beige tones */
+    --muted: 30 15% 85%;
+    --muted-foreground: 20 10% 40%;
+
+    /* Crimson accent */
+    --accent: 347 81% 35%;
+    --accent-foreground: 35 25% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 35 25% 95%;
+
+    --border: 30 15% 80%;
+    --input: 30 15% 80%;
+    --ring: 347 81% 35%;
+
+    --radius: 0.25rem;
+
+    /* Custom tokens */
+    --crimson: 347 81% 35%;
+    --crimson-light: 347 70% 45%;
+    --crimson-dark: 347 85% 28%;
+    --beige: 35 25% 92%;
+    --beige-dark: 32 20% 85%;
+    --beige-light: 38 30% 96%;
+    --warm-brown: 25 30% 25%;
+
+    /* Typography */
+    --font-display: "Playfair Display", Georgia, serif;
+    --font-body: "Lato", system-ui, sans-serif;
+
+    /* Shadows */
+    --shadow-soft: 0 2px 12px -2px hsl(20 15% 15% / 0.06);
+    --shadow-elevated: 0 6px 24px -6px hsl(20 15% 15% / 0.1);
+    --shadow-crimson: 0 4px 16px -4px hsl(347 81% 35% / 0.2);
+
+    --sidebar-background: 35 20% 92%;
+    --sidebar-foreground: 20 15% 15%;
+    --sidebar-primary: 347 81% 35%;
+    --sidebar-primary-foreground: 35 25% 95%;
+    --sidebar-accent: 32 20% 88%;
+    --sidebar-accent-foreground: 20 15% 20%;
+    --sidebar-border: 30 15% 80%;
+    --sidebar-ring: 347 81% 35%;
+  }
+
+  .dark {
+    --background: 20 12% 8%;
+    --foreground: 35 20% 92%;
+
+    --card: 20 10% 12%;
+    --card-foreground: 35 20% 92%;
+
+    --popover: 20 10% 12%;
+    --popover-foreground: 35 20% 92%;
+
+    --primary: 347 70% 50%;
+    --primary-foreground: 20 12% 8%;
+
+    --secondary: 25 12% 18%;
+    --secondary-foreground: 35 20% 92%;
+
+    --muted: 25 10% 20%;
+    --muted-foreground: 30 12% 55%;
+
+    --accent: 347 70% 50%;
+    --accent-foreground: 20 12% 8%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 35 20% 92%;
+
+    --border: 25 10% 22%;
+    --input: 25 10% 22%;
+    --ring: 347 70% 50%;
+
+    --crimson: 347 70% 50%;
+    --crimson-light: 347 60% 60%;
+    --crimson-dark: 347 75% 40%;
+    --beige: 25 12% 15%;
+    --beige-dark: 20 10% 12%;
+    --beige-light: 25 15% 18%;
+    --warm-brown: 30 15% 70%;
+
+    --shadow-soft: 0 2px 12px -2px hsl(0 0% 0% / 0.25);
+    --shadow-elevated: 0 6px 24px -6px hsl(0 0% 0% / 0.35);
+    --shadow-crimson: 0 4px 16px -4px hsl(347 70% 50% / 0.25);
+
+    --sidebar-background: 20 10% 10%;
+    --sidebar-foreground: 35 20% 92%;
+    --sidebar-primary: 347 70% 50%;
+    --sidebar-primary-foreground: 20 12% 8%;
+    --sidebar-accent: 25 10% 18%;
+    --sidebar-accent-foreground: 35 20% 92%;
+    --sidebar-border: 25 10% 22%;
+    --sidebar-ring: 347 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .text-crimson {
+    color: hsl(var(--crimson));
+  }
+
+  .bg-beige {
+    background-color: hsl(var(--beige));
+  }
+
+  .bg-beige-dark {
+    background-color: hsl(var(--beige-dark));
+  }
+
+  .bg-beige-light {
+    background-color: hsl(var(--beige-light));
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-crimson {
+    box-shadow: var(--shadow-crimson);
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-delay-1 {
+    animation: fadeIn 0.6s ease-out 0.1s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay-2 {
+    animation: fadeIn 0.6s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay-3 {
+    animation: fadeIn 0.6s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
