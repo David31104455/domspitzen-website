@@ -5,28 +5,13 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
-          <div className="space-y-4">
-            <div className="mb-4 bg-white/90 p-2 rounded-lg inline-block">
-              <img
-                src="/logo.png"
-                alt="Domspitzen Event-Service"
-                className="h-40 w-auto object-contain"
-              />
-            </div>
-            <p className="text-primary-foreground/70 font-body text-sm leading-relaxed">
-              Perfekte Events für jeden Anlass. Ihr kompetenter Partner für
-              unvergessliche Veranstaltungen.
-            </p>
-          </div>
-
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Quick Links */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center text-center">
             <h4 className="font-display text-lg font-medium text-crimson-light">
               Navigation
             </h4>
-            <nav className="flex flex-col gap-2">
+            <nav className="flex flex-col gap-2 items-center">
               {[
                 { href: "/", label: "Home" },
                 { href: "/leistungen", label: "Leistungen" },
@@ -46,11 +31,11 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center text-center">
             <h4 className="font-display text-lg font-medium text-crimson-light">
               Unsere Services
             </h4>
-            <nav className="flex flex-col gap-2">
+            <nav className="flex flex-col gap-2 items-center">
               {[
                 "Hochzeiten",
                 "Familienfeste",
@@ -69,11 +54,11 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center text-center">
             <h4 className="font-display text-lg font-medium text-crimson-light">
               Kontakt
             </h4>
-            <div className="space-y-3">
+            <div className="space-y-3 flex flex-col items-center">
               <a
                 href="tel:015174377888"
                 className="flex items-center gap-3 text-primary-foreground/70 hover:text-crimson-light transition-colors text-sm font-body"
